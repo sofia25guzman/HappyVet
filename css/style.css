@@ -62,6 +62,12 @@ nav{
     "video"
 }
 
+@media (min-width: 300px) {
+    .navbar{
+        min-width: 100vh;
+    }
+}
+
 /*configuracion para desktop*/
 @media (min-width: 768px) { 
     .iniciogrid-layout {
