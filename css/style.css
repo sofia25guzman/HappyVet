@@ -63,7 +63,10 @@ nav{
 }
 
 @media (min-width: 300px) {
-    .navbar .iniciogrid-layout{
+    .navbar{
+        min-width: 100vh;
+    }
+    .main{
         min-width: 100vh;
     }
 }
