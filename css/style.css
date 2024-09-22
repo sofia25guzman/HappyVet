@@ -60,6 +60,7 @@ nav{
     "textomapa"
     "mapa"
     "video"
+    min-width: 100vh;
 }
 /*configuracion para desktop*/
 @media (min-width: 768px) { 
