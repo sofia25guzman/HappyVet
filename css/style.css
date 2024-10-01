@@ -1,437 +1,331 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.nosotrosgrid-layout {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "textsection1" "imgsection1" "containersection2" "titulo3" "carrusel";
 }
-@font-face {
-    font-family:"Kitten";
-    src: url(../font/AustieBostKittenKlub.ttf);
+@media (min-width: 768px) {
+  .nosotrosgrid-layout {
+    grid-template-areas: "textsection1  textsection1 imgsection1" "containersection2 containersection2 containersection2" "titulo3 titulo3 titulo3" "carrusel carrusel carrusel";
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-
-h1, h2{
-    font-family:"kitten";
-    font-weight: 100;
-    font-size: 4ch;
-    text-shadow: 0 4px 8px rgb(246, 2, 238);
+.nosotrosgrid-layout .textsection1 {
+  grid-area: textsection1;
+  text-align: center;
 }
-.formulario2,.formulario,.containerturnos,p, h3, li{
-    font-family: "Grandstander", cursive;
-    font-size: large;
-    font-stretch: expanded;
+.nosotrosgrid-layout .textsection1 .titulosection1 {
+  text-align: center;
 }
-
-
-/*navegador*/
-nav{
-    font-family: "Grandstander";
-    background-color: #fcd1d8;
+.nosotrosgrid-layout .imgsection1 {
+  grid-area: imgsection1;
+  justify-self: left;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0.1);
 }
-
-@media (min-width: 200px) {
-    .navbar{
-        min-width: 100vh;
-    }
-    
-.Logo{
-    width: 200px;
+.nosotrosgrid-layout .containersection2 {
+  grid-area: containersection2;
+  text-align: center;
+  background-color: #fcd1d8;
 }
-
-
-.nav-item :hover{
-    color: black;
-    background-color: #89cbf5;
-    border-radius: 50px;
+.nosotrosgrid-layout .containersection2 .imgsection2 .servicios {
+  list-style-type: none;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #fcd1d8;
 }
-
-.nav-link{
-    font-weight: bold;
-    font-size: xx-large;
-    gap: 100px;
+.nosotrosgrid-layout .containersection2 .imgsection2 .servicios .servicios li {
+  width: 30%;
 }
-
-/*Inicio*/
-
-/*configuracion version mobile*/
-.iniciogrid-layout{
-    display: grid;
-    gap: 20px ;
-    grid-template-areas:     
-    "hijoimg1"
-    "textimg1"
-    "hijoimg2"
-    "textimg2"
-    "hijoimg3"
-    "textimg3"
-    "textomapa"
-    "mapa"
-    "video"
+.nosotrosgrid-layout .containersection2 .imgsection2 .servicios li :hover figcaption {
+  display: block;
+  cursor: pointer;
 }
-
-
-
-/*configuracion para desktop*/
-@media (min-width: 768px) { 
-    .iniciogrid-layout {
-        grid-template-areas:     
-            "hijoimg1 hijoimg2 hijoimg3" 
-            "textimg1 textimg2 textimg3"  
-            "textomapa textomapa mapa"               
-            "video video video";          
-        grid-template-columns: repeat(3, 1fr);
-        min-width: 100vh;
-    }
+.nosotrosgrid-layout .containersection2 .imgsection2 .servicios li figure {
+  padding: 5px;
+  position: relative;
 }
-
-.hijoimg1{
-    grid-area: hijoimg1;
-    justify-self: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(0, 0, 0.1 );
-    transition: 1s;
-    cursor: pointer;
+.nosotrosgrid-layout .containersection2 .imgsection2 .servicios li figcaption {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  padding: 15px;
+  color: #ffffff;
+  font-size: x-large;
+  background: rgba(87, 86, 86, 0.8);
+}
+.nosotrosgrid-layout .section3 {
+  background-color: #ffffff;
+}
+.nosotrosgrid-layout .section3 .titulo3 {
+  grid-area: titulo3;
+  text-align: center;
+}
+.nosotrosgrid-layout .section3 .carrusel {
+  grid-area: carrusel;
+  justify-self: center;
+}
+.nosotrosgrid-layout .section3 .carrusel .carousel-control-prev-icon {
+  background-image: url(../img/flechaizq.png);
+  filter: blur(100%);
+}
+.nosotrosgrid-layout .section3 .carrusel .carousel-control-next-icon {
+  background-image: url(../img/flechadere.png);
+  filter: blur(100%);
 }
 
-
-.textimg1{
-    grid-area: textimg1;
-    text-align: center;
+.Llamandogrid-Layout {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "titulovet" "imgvet" "containerturnos" "nuestrospacientes";
 }
-.hijoimg1 :hover{
-    transform: scale(1.1);
-    transition: 1s;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(0, 0, 0.1 );
+@media (min-width: 768px) {
+  .Llamandogrid-Layout {
+    grid-template-areas: "titulovet titulovet imgvet" "containerturnos containerturnos containerturnos" " nuestrospacientes nuestrospacientes nuestrospacientes";
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-
-.hijoimg2{
-    grid-area: hijoimg2;
-    justify-self: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(0, 0, 0.1 );
-    transition: 1s;
-    cursor: pointer;
+.Llamandogrid-Layout .titulovet {
+  grid-area: titulovet;
+  text-align: center;
 }
-.hijoimg2 :hover{
-    transform: scale(1.1);
-    transition: 1s;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(0, 0, 0.1 );
+.Llamandogrid-Layout .imgvet {
+  grid-area: imgvet;
+  justify-self: center;
 }
-
-.textimg2{
-    grid-area: textimg2;
-    text-align: center;
+.Llamandogrid-Layout .containerturnos {
+  grid-area: containerturnos;
+  justify-self: center;
 }
-.hijoimg3{
-    grid-area: hijoimg3;
-    justify-self: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(0, 0, 0.1 );
-    transition: 1s;
-    cursor: pointer;
+.Llamandogrid-Layout .nuestrospacientes {
+  grid-area: nuestrospacientes;
 }
-.hijoimg3 :hover{
-    transform: scale(1.1);
-    transition: 1s;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(0, 0, 0.1 );
+.Llamandogrid-Layout .nuestrospacientes .textpacientes {
+  text-align: center;
 }
 
-.textimg3{
-    grid-area: textimg3;
-    text-align: center;
+.logingrid-Layout {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "textlogin" "containerformu" "imglogin" "qr" "texqr" "listtexqr";
+}
+@media (min-width: 768px) {
+  .logingrid-Layout {
+    grid-template-areas: "textlogin textlogin imglogin" "containerformu containerformu imglogin" "qr texqr texqr" "qr listtexqr listtexqr";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.logingrid-Layout .textlogin {
+  grid-area: textlogin;
+  text-align: center;
+}
+.logingrid-Layout .containerformu {
+  grid-area: containerformu;
+  justify-self: center;
+  background-color: #fcd1d8;
+}
+.logingrid-Layout .imglogin {
+  place-self: center;
+  grid-area: imglogin;
+  justify-self: center;
+}
+.logingrid-Layout .qr {
+  grid-area: qr;
+  justify-self: center;
+}
+.logingrid-Layout .texqr {
+  grid-area: texqr;
+}
+.logingrid-Layout .listtexqr {
+  grid-area: listtexqr;
+  text-align: start;
+  list-style-type: none;
 }
 
-.textomapa{
-    grid-area: textomapa;
-    text-align: center;
-    background-color: #fcd1d8;
+.Turnosgrid-Layout {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "containerformu";
+  background-image: url(../img/fondohuellas.jpg);
 }
-.mapa{
-    grid-area: mapa;
-    justify-self: center;
-
-}
-
-.video{
-    grid-area: video;
-    justify-self: center;
-}
-
-/*footer*/
-.footercss{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;  
-    padding: 20px;
-    font-family: "Grandstander", cursive;
-    background-color: #fcd1d8;
-}
-
-.redes{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.listss{
-    display: flex;
-    justify-content: center;
-    right: 200;
-}
-
-.chatbot{
-    position: fixed; 
-    bottom:0;
-    right: 0;
-}
-
-/*Nosotros*/
-
-/*configuracion version mobile*/
-.nosotrosgrid-layout{
-    display: grid;
-    gap: 20px ;
-    grid-template-areas:
-    "textsection1"    
-    "imgsection1"
-    "containersection2"
-    "titulo3"
-    "carrusel"
-}
-
-/*configuracion para desktop*/
-@media (min-width: 768px) { 
-    .nosotrosgrid-layout {
-        grid-template-areas:     
-            "textsection1  textsection1 imgsection1" 
-            "containersection2 containersection2 containersection2"               
-            "titulo3 titulo3 titulo3"
-            "carrusel carrusel carrusel";        
-        grid-template-columns: repeat(3, 1fr); 
-    }
-
-    .servicios{
-        display: flex;
-        list-style: none;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        background-color: #fcd1d8;
-        
-    }
-    .servicios li{
-        width: 30%;
-    }
-    .servicios li :hover figcaption{
-        display: block;
-        cursor: pointer;
-        
-    }
-    
-    .servicios li figure{
-        padding: 5px;
-        position: relative;
-    }
-    
-    .servicios li figcaption{
-        display: none; /*no se visualiza solo hasta que pase el mouse por el contenedor padre*/
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        bottom: 10px;
-        right: 10px;
-        text-align: center;
-        padding: 15px;
-        color: #ffffff;
-        font-size: x-large;
-        background: rgba(87, 86, 86, 0.8);
-    }
-
-    .carrusel{
-        justify-self: center;
-    }
-}
-
-.titulosection1{
-    text-align: center;
-}
-.textsection1{
-    grid-area: textsection1;
-    text-align:center;
-}
-
-.imgsection1{
-    grid-area: imgsection1;
-    justify-self: left;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(0, 0, 0.1 );
-}
-
-.containersection2{
-    grid-area: containersection2;
-    text-align: center;
-    background-color: #fcd1d8;
-    
-}
-
-.titulo3{
-    grid-area: titulo3;
-    text-align: center;
-}
-
-.carrusel{
-    grid-area: carrusel;
-    
-}
-.carousel-control-prev-icon{
-    background-image: url(../img/flechaizq.png);
-    filter: blur(100%);
-}
-
-.carousel-control-next-icon{
-    background-image: url(../img/flechadere.png);
-    filter: blur(100%);
-}
-.servicios{
-    list-style-type: none;
-    
-}
-
-/*Llamando al Vet*/
-
-/*Configuracion para la version mobile*/
-.Llamandogrid-Layout{
-    display: grid;
-    gap: 20px ;
-    grid-template-areas:    
-    "titulovet"
-    "imgvet"
-    "containerturnos"
-    "nuestrospacientes"
-}
-
-/*configuracion para desktop*/
-@media (min-width: 768px) { 
-    .Llamandogrid-Layout {
-        grid-template-areas:     
-            "titulovet titulovet imgvet" 
-            "containerturnos containerturnos containerturnos"               
-            " nuestrospacientes nuestrospacientes nuestrospacientes";        
-        grid-template-columns: repeat(3, 1fr); 
-    }
-}
-
-.titulovet{
-    grid-area: titulovet;
-    text-align: center;
-    
-}
-
-.imgvet{
-    grid-area: imgvet;
-    justify-self: center;
-}
-
-.containerturnos{
-    grid-area: containerturnos;
-    justify-self: center;
-
-}
-
-.textpacientes{
-    text-align: center;
-}
-.nuestrospacientes{
-    grid-area: nuestrospacientes;
-}
-
-/*login*/
-
-/*configuracion version mobile*/
-.logingrid-Layout{
-    display: grid;
-    gap: 20px ;
-    grid-template-areas: 
-    "textlogin"   
-    "containerformu"
-    "imglogin"
-    "qr"
-    "texqr"
-    "listtexqr"
-}
-
-/*configuracion para desktop*/
-@media (min-width: 768px) { 
-    .logingrid-Layout {
-        grid-template-areas:     
-            "textlogin textlogin imglogin" 
-            "containerformu containerformu imglogin"
-            "qr texqr texqr"
-            "qr listtexqr listtexqr";        
-        grid-template-columns: repeat(3, 1fr); 
-    }
-    .imglogin{
-        place-self: center;
-    }
-}
-
-.textlogin{
-    grid-area: textlogin;
-    text-align: center;
-}
-
-.containerformu{
+@media (min-width: 768px) {
+  .Turnosgrid-Layout {
+    grid-template-areas: ". containerformu .";
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Turnosgrid-Layout .containerformu {
     grid-area: containerformu;
-    justify-self: center;
-}
-
-.imglogin{
-    grid-area: imglogin;
-    justify-self: center;
-}
-
-.qr{
-    grid-area: qr;
-    justify-self: center;
-}
-
-.texqr{
-    grid-area: texqr;
-    text-align: center;
-}
-
-.listtexqr{
-    grid-area: listtexqr;
-    text-align: start;
-    list-style-type: none;
-}
-
-
-/*turnos*/
-
-/*Configuracion para la version mobile y desktop*/
-.Turnosgrid-Layout{
-    display: grid;
-    gap: 20px ;
-    grid-template-areas:    
-    "containerformu";
-    background-image: url(../img/fondohuellas.jpg);
-    
-}
-
-.containerformu{
-    grid-area: containerformu;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 5%;
     gap: 10px;
     border-style: dotted;
-    border-color: #fb57cd;
-    
+    border-color: #f602ee;
+  }
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+@font-face {
+  font-family: "Kitten";
+  src: url(../font/AustieBostKittenKlub.ttf);
+}
+h1, h2 {
+  font-family: "Kitten";
+  font-weight: 100;
+  font-size: 4ch;
+  text-shadow: 0 4px 8px #f602ee;
+}
+
+.formulario2, .formulario, .containerturnos, p, h3, li {
+  font-family: "Grandstander", cursive;
+  font-size: large;
+  font-stretch: expanded;
+}
+
+header nav {
+  font-family: "Grandstander", cursive;
+  background-image: linear-gradient(#f1a8e8, #ffffff);
+}
+header nav .navbar {
+  min-width: 100vh;
+}
+header nav .Logo {
+  width: 200px;
+}
+header nav .nav-item:hover {
+  color: black;
+  background-color: #89cbf5;
+  border-radius: 50px;
+}
+header nav .nav-item .nav-link {
+  font-weight: bold;
+  font-size: xx-large;
+  gap: 100px;
+}
+
+main {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "hijoimg1" "textimg1" "hijoimg2" "textimg2" "hijoimg3" "textimg3" "textomapa" "mapa" "video";
+}
+@media (min-width: 768px) {
+  main {
+    grid-template-areas: "hijoimg1 hijoimg2 hijoimg3" "textimg1 textimg2 textimg3" "textomapa textomapa mapa" "video video video";
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 100vh;
+  }
+}
+main .hijoimg1, main .hijoimg2, main .hijoimg3 {
+  justify-self: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1019607843);
+  transition: 1s;
+  cursor: pointer;
+}
+main .hijoimg1:hover, main .hijoimg2:hover, main .hijoimg3:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1019607843);
+}
+main .hijoimg1 {
+  grid-area: hijoimg1;
+}
+main .hijoimg2 {
+  grid-area: hijoimg2;
+}
+main .hijoimg3 {
+  grid-area: hijoimg3;
+}
+main .textimg1 {
+  grid-area: textimg1;
+  text-align: center;
+}
+main .textimg2 {
+  grid-area: textimg2;
+  text-align: center;
+}
+main .textimg3 {
+  grid-area: textimg3;
+  text-align: center;
+}
+main .textomapa {
+  background-color: #fcd1d8;
+  grid-area: textomapa;
+  text-align: center;
+}
+main .mapa {
+  grid-area: mapa;
+  justify-self: center;
+}
+main .video {
+  grid-area: video;
+  justify-self: center;
+}
+
+footer .footercss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  font-family: "Grandstander", cursive;
+  background-color: #fcd1d8;
+}
+footer .footercss .redes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+footer .footercss .listss {
+  display: flex;
+  justify-content: center;
+  right: 200;
+}
+footer .footercss .chatbot {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.footercss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  font-family: "Grandstander", cursive;
+  background-image: linear-gradient(#ffffff, #f1a8e8);
+  min-width: 100vh;
+}
+.footercss .redes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.footercss .listss {
+  display: flex;
+  justify-content: center;
+  right: 200;
+}
+.footercss .chatbot {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,105 @@
+main{
+    display: grid;
+    gap: 20px;
+    grid-template-areas:     
+        "hijoimg1"
+        "textimg1"
+        "hijoimg2"
+        "textimg2"
+        "hijoimg3"
+        "textimg3"
+        "textomapa"
+        "mapa"
+        "video";
+
+    // Configuración para desktop
+    @media (min-width: 768px) { 
+        grid-template-areas:     
+            "hijoimg1 hijoimg2 hijoimg3" 
+            "textimg1 textimg2 textimg3"  
+            "textomapa textomapa mapa"               
+            "video video video";          
+        grid-template-columns: repeat(3, 1fr);
+        min-width: 100vh;
+    }
+    .hijoimg1, .hijoimg2, .hijoimg3 {
+        justify-self: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px $shadow-color;
+        transition: 1s;
+        cursor: pointer;
+    
+        &:hover {
+            transform: scale(1.1);
+            transition: 1s;
+            box-shadow: 0 4px 8px $shadow-color;
+        }
+    }
+    .hijoimg1 {
+        grid-area: hijoimg1;
+    }
+    
+    .hijoimg2 {
+        grid-area: hijoimg2;
+    }
+    
+    .hijoimg3 {
+        grid-area: hijoimg3;
+    }
+    .textimg1{
+        grid-area: textimg1;
+        text-align: center;
+    }
+    .textimg2{
+        grid-area: textimg2;
+        text-align: center;
+    }
+    .textimg3{
+        grid-area: textimg3;
+        text-align: center;
+    }
+    
+    .textomapa {
+        background-color:  $backgroud-color;
+        grid-area: textomapa;
+        text-align: center;
+    }
+    .mapa{
+        grid-area: mapa;
+        justify-self: center;
+    }
+    .video{
+        grid-area: video;
+        justify-self: center;
+    } 
+}
+
+footer{
+    .footercss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;  
+    padding: 20px;
+    font-family: $font-family-grandstander;
+    background-color: $backgroud-color;
+        .redes {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        }
+
+        .listss {
+        display: flex;
+        justify-content: center;
+        right: 200;
+        }
+
+        .chatbot {
+        position: fixed; 
+        bottom: 0;
+        right: 0;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.Llamandogrid-Layout{
+    display: grid;
+    gap: 20px ;
+    grid-template-areas:    
+    "titulovet"
+    "imgvet"
+    "containerturnos"
+    "nuestrospacientes";
+    @media (min-width: 768px) { 
+        &{
+            grid-template-areas:     
+                "titulovet titulovet imgvet" 
+                "containerturnos containerturnos containerturnos"               
+                " nuestrospacientes nuestrospacientes nuestrospacientes";        
+            grid-template-columns: repeat(3, 1fr); 
+        }
+    }
+    .titulovet{
+    grid-area: titulovet;
+    text-align: center;    
+    }
+    .imgvet{
+    grid-area: imgvet;
+    justify-self: center;
+    }
+    .containerturnos{
+    grid-area: containerturnos;
+    justify-self: center;
+    }
+    .nuestrospacientes{
+    grid-area: nuestrospacientes;
+        .textpacientes{
+        text-align: center;
+        }
+    }
+}
+
+
+
+

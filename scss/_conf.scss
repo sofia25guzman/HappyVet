@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: $font-family-kitten;
+    src: url(../font/AustieBostKittenKlub.ttf);
+}
+
+h1, h2 {
+    font-family: $font-family-kitten;
+    font-weight: 100;
+    font-size: 4ch;
+    text-shadow: 0 4px 8px $text-shadow-color;
+}
+
+.formulario2, .formulario, .containerturnos, p, h3, li {
+    font-family: $font-family-grandstander;
+    font-size: large;
+    font-stretch: expanded;
+}

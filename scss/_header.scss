@@ -1,0 +1,28 @@
+header{
+    nav {
+    font-family: $font-family-grandstander;
+    background-image: linear-gradient($nav-color,$figtextcolor);
+
+        .navbar {
+        min-width: 100vh;
+        }
+
+        .Logo {
+        width: 200px;
+        }
+
+        .nav-item {
+            &:hover {
+            color: black;
+            background-color: $hover-color;
+            border-radius: 50px;
+            }
+
+        .nav-link {
+            font-weight: bold;
+            font-size: xx-large;
+            gap: 100px;
+            }
+        }
+    }
+}

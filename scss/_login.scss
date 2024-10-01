@@ -1,0 +1,49 @@
+.logingrid-Layout{
+        display: grid;
+        gap: 20px ;
+        grid-template-areas: 
+        "textlogin"   
+        "containerformu"
+        "imglogin"
+        "qr"
+        "texqr"
+        "listtexqr";
+    @media (min-width: 768px) { 
+        &{
+            grid-template-areas:     
+                "textlogin textlogin imglogin" 
+                "containerformu containerformu imglogin"
+                "qr texqr texqr"
+                "qr listtexqr listtexqr";        
+            grid-template-columns: repeat(3, 1fr); 
+        }
+    }
+    .textlogin{
+        grid-area: textlogin;
+        text-align: center;
+    }
+    .containerformu{
+        grid-area: containerformu;
+        justify-self: center;
+        background-color: $backgroud-color;
+    }
+    .imglogin{
+        place-self: center;
+        grid-area: imglogin;
+        justify-self: center;
+    }
+    .qr{
+        grid-area: qr;
+        justify-self: center;
+    }
+    
+    .texqr{
+        grid-area: texqr;
+    }
+    
+    .listtexqr{
+        grid-area: listtexqr;
+        text-align: start;
+        list-style-type: none;
+    }
+}

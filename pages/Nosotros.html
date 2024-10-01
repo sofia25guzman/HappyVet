@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg color_nav">
             <div class="container-fluid  ">
             <a class="navbar-brand "  href="#">
-                <img class="Logo" src="../img/Logo sin fondo.png"  alt="" class="d-inline-block align-text-top">
+                <div class="animate__animated animate__rubberBand">
+                    <img class="Logo" src="../img/Logo sin fondo.png"  alt="" class="d-inline-block align-text-top">
+                </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,7 +28,7 @@
                     <a class="nav-link" href="../index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" " href="#">Nosotros</a>
+                    <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./Llamando al Vet.html">Llamando al Vet</a>
@@ -41,8 +44,9 @@
             </div>
         </nav>
 <header>
-    <br>
+    <hr class="border border-danger border-2 opacity-50">
     <main class="nosotrosgrid-layout">
+
             <div  class="textsection1">
                 <h1 class="titulosection1">Bienvenido a HappyVet</h1>
                 <br>
@@ -51,8 +55,8 @@
             <div class="imgsection1">
                 <img src="../img/section1.jpg" width="350" alt="">
             </div>  
-        <hr>
-        <section class="containersection2">
+        </div>
+        <div class="containersection2">
             <div class="textsection2">
                 <h1 class="tituloss">Nuestros Servicios</h1>
             </div>
@@ -111,36 +115,39 @@
                 </ul>
                 
             </div>
-        </section>
+
         <br>
-            <h2 class="titulo3">Nuestras Sucursales</h2>
-            <div class="carrusel">
-                <div id="carouselExample" class="carousel slide ">
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/sucursal4.jpeg"  alt="sucu1" width="620" height="300">
+            <div class="section3">
+                <h2 class="titulo3">Nuestras Sucursales</h2>
+                <div class="carrusel">
+                    <div id="carouselExample" class="carousel slide ">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../img/sucursal4.jpeg"  alt="sucu1" width="620" height="300">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/sucursal2.jpeg"  alt="sucu2" width="620" height="300">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/sucursal3.jpeg"  alt="sucu3" width="620" height="300">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/sucursal3.jpeg"  alt="sucu4" width="620" height="300">
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="carousel-item">
-                        <img src="../img/sucursal2.jpeg"  alt="sucu2" width="620" height="300">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/sucursal3.jpeg"  alt="sucu3" width="620" height="300">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/sucursal3.jpeg"  alt="sucu4" width="620" height="300">
-                    </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
     </main>
+    <hr class="border border-danger border-2 opacity-50">
     <footer>
         <div class="footercss">
             <div class="contacto">

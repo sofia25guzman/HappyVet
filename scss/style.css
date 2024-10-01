@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Kitten";
+  src: url(../font/AustieBostKittenKlub.ttf);
+}
+h1, h2 {
+  font-family: "Kitten";
+  font-weight: 100;
+  font-size: 4ch;
+  text-shadow: 0 4px 8px rgb(246, 2, 238);
+}
+
+.formulario2, .formulario, .containerturnos, p, h3, li {
+  font-family: "Grandstander", cursive;
+  font-size: large;
+  font-stretch: expanded;
+}
+
+header nav {
+  font-family: "Grandstander", cursive;
+  background-color: #fcd1d8;
+}
+header nav .navbar {
+  min-width: 100vh;
+}
+header nav .Logo {
+  width: 200px;
+}
+header nav .nav-item:hover {
+  color: black;
+  background-color: #89cbf5;
+  border-radius: 50px;
+}
+header nav .nav-item .nav-link {
+  font-weight: bold;
+  font-size: xx-large;
+  gap: 100px;
+}
+
+main {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "hijoimg1" "textimg1" "hijoimg2" "textimg2" "hijoimg3" "textimg3" "textomapa" "mapa" "video";
+}
+@media (min-width: 768px) {
+  main {
+    grid-template-areas: "hijoimg1 hijoimg2 hijoimg3" "textimg1 textimg2 textimg3" "textomapa textomapa mapa" "video video video";
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 100vh;
+  }
+}
+main .hijoimg1, main .hijoimg2, main .hijoimg3 {
+  justify-self: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+  cursor: pointer;
+}
+main .hijoimg1:hover, main .hijoimg2:hover, main .hijoimg3:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+main .hijoimg1 {
+  grid-area: hijoimg1;
+}
+main .hijoimg2 {
+  grid-area: hijoimg2;
+}
+main .hijoimg3 {
+  grid-area: hijoimg3;
+}
+main .textimg1 {
+  grid-area: textimg1;
+  text-align: center;
+}
+main .textimg2 {
+  grid-area: textimg2;
+  text-align: center;
+}
+main .textimg3 {
+  grid-area: textimg3;
+  text-align: center;
+}
+main .textomapa {
+  background-color: #fcd1d8;
+  grid-area: textomapa;
+  text-align: center;
+}
+main .mapa {
+  grid-area: mapa;
+  justify-self: center;
+}
+main .video {
+  grid-area: video;
+  justify-self: center;
+}
+
+footer .footercss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  font-family: "Grandstander", cursive;
+  background-color: #fcd1d8;
+}
+footer .footercss .redes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+footer .footercss .listss {
+  display: flex;
+  justify-content: center;
+  right: 200;
+}
+footer .footercss .chatbot {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=style.css.map */

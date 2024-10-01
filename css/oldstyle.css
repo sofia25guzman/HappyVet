@@ -35,7 +35,7 @@ nav{
 .Logo{
     width: 200px;
 }
-
+}
 
 .nav-item :hover{
     color: black;
@@ -433,5 +433,3 @@ nav{
     border-color: #fb57cd;
     
 }
-
-

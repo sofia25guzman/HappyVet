@@ -1,0 +1,31 @@
+.footercss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;  
+    padding: 20px;
+    font-family: "Grandstander", cursive;
+    background-image: linear-gradient($figtextcolor,$nav-color);
+    min-width: 100vh;
+    .redes{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    .listss{
+        display: flex;
+        justify-content: center;
+        right: 200;
+    }
+    .chatbot{
+        position: fixed; 
+        bottom:0;
+        right: 0;
+    }
+}
+
+
+
+
+

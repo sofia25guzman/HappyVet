@@ -1,0 +1,25 @@
+.Turnosgrid-Layout{
+        display: grid;
+        gap: 20px ;
+        grid-template-areas:    
+        "containerformu";
+        background-image: url(../img/fondohuellas.jpg);
+        @media (min-width: 768px) {
+            &{
+            grid-template-areas:  
+            ". containerformu .";
+            grid-template-columns: repeat(3, 1fr);
+        } 
+        
+        .containerformu{
+        grid-area: containerformu;
+        align-content: center;
+        justify-content: center;
+        margin: 10px;
+        padding: 5%;
+        gap: 10px;
+        border-style: dotted;
+        border-color: $text-shadow-color;
+        }
+    }
+}

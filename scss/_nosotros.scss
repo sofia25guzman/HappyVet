@@ -1,0 +1,109 @@
+
+.nosotrosgrid-layout{
+    display: grid;
+    gap: 20px ;
+    grid-template-areas:
+    "textsection1"    
+    "imgsection1"
+    "containersection2"
+    "titulo3"
+    "carrusel";
+    @media (min-width: 768px) {
+        &{
+        grid-template-areas:     
+            "textsection1  textsection1 imgsection1" 
+            "containersection2 containersection2 containersection2"               
+            "titulo3 titulo3 titulo3"
+            "carrusel carrusel carrusel";        
+        grid-template-columns: repeat(3, 1fr);
+        }  
+    }
+    .textsection1{
+        grid-area: textsection1;
+        text-align:center;
+        .titulosection1{
+            text-align: center;
+        }
+    }
+    .imgsection1{
+        grid-area: imgsection1;
+        justify-self: left;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgb(0, 0, 0.1 );
+    }
+    .containersection2{
+        grid-area: containersection2;
+        text-align: center;
+        background-color: $backgroud-color;
+        .imgsection2{
+            .servicios{
+                list-style-type: none;
+                display: flex;
+                list-style: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                background-color: $backgroud-color;
+                .servicios li{
+                    width: 30%;
+                }
+            }
+            .servicios li :hover figcaption{
+                display: block;
+                cursor: pointer;
+                
+            }
+            .servicios li figure{
+                padding: 5px;
+                position: relative;
+            }
+            
+            .servicios li figcaption{
+                display: none; 
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                bottom: 10px;
+                right: 10px;
+                text-align: center;
+                padding: 15px;
+                color: $figtextcolor;
+                font-size: x-large;
+                background: $fighover;
+            }
+        }
+    }
+    .section3{
+        background-color: $figtextcolor;
+        .titulo3{
+            grid-area: titulo3;
+            text-align: center;
+        }
+        .carrusel{
+            grid-area: carrusel;
+            justify-self: center;
+            .carousel-control-prev-icon{
+                background-image: url(../img/flechaizq.png);
+                filter: blur(100%);
+        
+            }
+            .carousel-control-next-icon{
+                background-image: url(../img/flechadere.png);
+                filter: blur(100%);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
