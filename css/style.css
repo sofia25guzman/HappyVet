@@ -127,6 +127,9 @@
     width: 100%;
     height: auto;
   }
+  .containersection2 .disclaimer {
+    text-align: center;
+  }
   .carrusel {
     width: 100%;
     height: auto;
