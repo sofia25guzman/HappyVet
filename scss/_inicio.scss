@@ -1,105 +1,96 @@
-main{
+.iniciogrid-layout {
     display: grid;
     gap: 20px;
     grid-template-areas:     
-        "hijoimg1"
-        "textimg1"
-        "hijoimg2"
-        "textimg2"
-        "hijoimg3"
-        "textimg3"
+        "divhijos"
         "textomapa"
         "mapa"
         "video";
 
-    // Configuración para desktop
     @media (min-width: 768px) { 
         grid-template-areas:     
-            "hijoimg1 hijoimg2 hijoimg3" 
-            "textimg1 textimg2 textimg3"  
+            "divhijos divhijos divhijos" 
             "textomapa textomapa mapa"               
             "video video video";          
         grid-template-columns: repeat(3, 1fr);
-        min-width: 100vh;
     }
-    .hijoimg1, .hijoimg2, .hijoimg3 {
-        justify-self: center;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px $shadow-color;
-        transition: 1s;
-        cursor: pointer;
-    
-        &:hover {
-            transform: scale(1.1);
-            transition: 1s;
-            box-shadow: 0 4px 8px $shadow-color;
-        }
-    }
-    .hijoimg1 {
-        grid-area: hijoimg1;
-    }
-    
-    .hijoimg2 {
-        grid-area: hijoimg2;
-    }
-    
-    .hijoimg3 {
-        grid-area: hijoimg3;
-    }
-    .textimg1{
-        grid-area: textimg1;
-        text-align: center;
-    }
-    .textimg2{
-        grid-area: textimg2;
-        text-align: center;
-    }
-    .textimg3{
-        grid-area: textimg3;
-        text-align: center;
-    }
-    
-    .textomapa {
-        background-color:  $backgroud-color;
-        grid-area: textomapa;
-        text-align: center;
-    }
-    .mapa{
-        grid-area: mapa;
-        justify-self: center;
-    }
-    .video{
-        grid-area: video;
-        justify-self: center;
-    } 
 }
 
-footer{
-    .footercss {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;  
-    padding: 20px;
-    font-family: $font-family-grandstander;
-    background-color: $backgroud-color;
-        .redes {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        }
+.divhijos {
+    grid-area: divhijos;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+    border-radius: 10px;
+}
 
-        .listss {
-        display: flex;
-        justify-content: center;
-        right: 200;
-        }
+.hijoimg1,
+.hijoimg2,
+.hijoimg3 {
+    box-shadow: 0 4px 8px $shadow-color;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 
-        .chatbot {
-        position: fixed; 
-        bottom: 0;
-        right: 0;
-        }
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px $shadow-color;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+
+.textomapa {
+    grid-area: textomapa;
+    background-color: $backgroud-color;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+}
+
+.mapa {
+    grid-area: mapa;
+    justify-self: center;
+
+
+}
+
+.video {
+    grid-area: video;
+    justify-self: center;  
+}
+
+@media (max-width: 768px) {
+    .hijoimg {
+        flex: 1 1 100%; 
+    }
+    .divhijos {
+        grid-area: divhijos;
+        max-width: 100vh;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px; 
+    }
+    .video iframe {
+        width: 100%; 
+        height: auto; 
+    }
+    .mapa     iframe {
+        width: 100%; 
+        height: auto; 
+    }
+    
 }

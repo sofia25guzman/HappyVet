@@ -4,11 +4,13 @@
         grid-template-areas:    
         "containerformu";
         background-image: url(../img/fondohuellas.jpg);
+        width: 100%;
         @media (min-width: 768px) {
             &{
             grid-template-areas:  
             ". containerformu .";
             grid-template-columns: repeat(3, 1fr);
+            width: 100%
         } 
         
         .containerformu{

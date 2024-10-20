@@ -2,38 +2,74 @@
     display: grid;
     gap: 20px ;
     grid-template-areas:    
-    "titulovet"
+    "divturno"
     "imgvet"
     "containerturnos"
     "nuestrospacientes";
     @media (min-width: 768px) { 
-        &{
             grid-template-areas:     
-                "titulovet titulovet imgvet" 
+                "divturno divturno divturno" 
                 "containerturnos containerturnos containerturnos"               
                 " nuestrospacientes nuestrospacientes nuestrospacientes";        
             grid-template-columns: repeat(3, 1fr); 
         }
     }
-    .titulovet{
-    grid-area: titulovet;
-    text-align: center;    
+
+.divturno{
+        grid-area: divturno;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px; 
+        justify-items: center;
+        .titulovet{
+            text-align: center;
+            margin: 0 auto;    
+            }
+        .imgvet{
+            width: 100%;
+            img {
+                max-width: 100%; 
+                height: auto; 
+            }
+        }    
+        .containerturnos{
+            grid-column: 1;
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 50px;
+            width: 100%;
+            }
     }
-    .imgvet{
-    grid-area: imgvet;
-    justify-self: center;
-    }
-    .containerturnos{
-    grid-area: containerturnos;
-    justify-self: center;
-    }
-    .nuestrospacientes{
+
+.nuestrospacientes{
     grid-area: nuestrospacientes;
         .textpacientes{
         text-align: center;
         }
     }
-}
+
+    @media (max-width: 768px) {
+        .divturno{
+            grid-area: divturno;
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px ;
+        }
+        .imgvet{
+            margin-right: 0;
+            img{
+                max-width: 100%;
+            }
+        }
+        .containerturnos{
+            width: 100%;
+            height: auto;
+        }
+    }
 
 
 
