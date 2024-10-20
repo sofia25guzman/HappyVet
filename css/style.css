@@ -60,15 +60,15 @@
   max-width: 100%;
   height: auto;
 }
-.containersection2 .imgsection2 .servicios .servicios li :hover figcaption {
+.containersection2 .imgsection2 .servicios li :hover figcaption {
   display: block;
   cursor: pointer;
 }
-.containersection2 .imgsection2 .servicios .servicios li figure {
+.containersection2 .imgsection2 .servicios li figure {
   padding: 5px;
   position: relative;
 }
-.containersection2 .imgsection2 .servicios .servicios li figcaption {
+.containersection2 .imgsection2 .servicios li figcaption {
   display: none;
   position: absolute;
   top: 10px;
